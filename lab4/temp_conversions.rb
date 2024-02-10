@@ -1,5 +1,8 @@
 def convert(temp)
-    c = (5/9)*(temp-32)
+    return "Temperature must be an integer" unless temp.class == Integer
+    a = 5.0/9.0
+    b = temp-32.0
+    c = a*b
     return c
 end
 
@@ -7,3 +10,4 @@ end
 puts convert(32)          
 puts convert(50)          
 puts convert(212)
+puts convert("zero")
