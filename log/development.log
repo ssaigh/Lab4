@@ -150,3 +150,25 @@ Read more about how to migrate at: https://guides.rubyonrails.org/active_record_
  (called from <main> at /home/ssaigh/lab04-ssaigh/config/environment.rb:5)
 DEPRECATION WARNING: Non-URL-safe CSRF tokens are deprecated. Use 6.1 defaults or above. (called from block in <class:Engine> at /usr/local/rvm/gems/ruby-3.1.2/bundler/gems/best_in_place-88eb3052623a/lib/best_in_place/engine.rb:5)
   [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  [1m[36mPublisher Load (0.2ms)[0m  [1m[34mSELECT "publishers".* FROM "publishers"[0m
+  [1m[36mPublisher Load (0.2ms)[0m  [1m[34mSELECT "publishers".* FROM "publishers" ORDER BY name[0m
+  [1m[36mPublisher Load (0.2ms)[0m  [1m[34mSELECT "publishers".* FROM "publishers" ORDER BY name[0m
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" ORDER BY "authors"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBookAuthor Load (0.1ms)[0m  [1m[34mSELECT "book_authors".* FROM "book_authors" ORDER BY "book_authors"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBookAuthor Load (0.1ms)[0m  [1m[34mSELECT "book_authors".* FROM "book_authors" ORDER BY "book_authors"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBookAuthor Load (0.1ms)[0m  [1m[34mSELECT "book_authors".* FROM "book_authors" ORDER BY "book_authors"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBookAuthor Load (0.1ms)[0m  [1m[34mSELECT "book_authors".* FROM "book_authors" ORDER BY "book_authors"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPublisher Load (0.2ms)[0m  [1m[34mSELECT "publishers".* FROM "publishers" WHERE "publishers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."title" = ? LIMIT ?[0m  [["title", "maths"], ["LIMIT", 1]]
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."title" = ? LIMIT ?[0m  [["title", "maths"], ["LIMIT", 1]]
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."title" = ?[0m  [["title", "maths"]]
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY title[0m
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE (year_published>2011)[0m
+  [1m[36mPublisher Load (0.2ms)[0m  [1m[34mSELECT "publishers".* FROM "publishers" ORDER BY name[0m
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" ORDER BY last_name, first_name[0m
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" ORDER BY "authors"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
