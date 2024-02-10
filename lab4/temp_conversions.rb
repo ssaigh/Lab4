@@ -1,6 +1,6 @@
 def convert(temp, measure ="F")
     return "Temperature must be an integer" unless temp.class == Integer
-    return "Temperature below Absolute Zero" if temp < -474 
+    return "Temperature below Absolute Zero" if below_absolute_zero?(temp, measure) 
     if measure == "F"
         a = 5.0/9.0
         b = temp-32.0
@@ -12,6 +12,14 @@ def convert(temp, measure ="F")
     end
 end
 
+def below_absolute_zero?(temp, measure)
+    # your code goes here
+    if measure == "F"
+        return temp < -474
+    else
+        return temp < -273
+    end
+end
 
 puts convert(32)          
 puts convert(50)          
